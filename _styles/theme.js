@@ -1,4 +1,4 @@
-import { DefaultTheme, DarkTheme } from 'react-native-paper';
+import { DefaultTheme } from 'react-native-paper';
 
 export const MainTheme = {
   ...DefaultTheme,
@@ -16,9 +16,5 @@ export const MainTheme = {
       background: '#1f1f1f',
       icongray: '#6f6f70',
     },
-  },
-  fonts: {
-    regular: 'Helvetica Neue',
-    medium: 'Helvetica Neue Light',
   },
 };

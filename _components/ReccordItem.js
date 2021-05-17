@@ -49,6 +49,11 @@ export const ReccordItem = ({ item, navigation, dispatch, posts }) => {
             alignItems: 'center',
           }}>
           <IconButton
+            icon={item.favorite === true ? 'heart' : 'heart-outline'}
+            size={24}
+            onPress={() => dispatch(postsActions.toggleFavorites(item, posts))}
+          />
+          <IconButton
             icon="share"
             size={24}
             onPress={() => onShare(item.guid)}

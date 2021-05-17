@@ -20,8 +20,6 @@ const NewRecordsPage = ({
   const [offset, setOffset] = useState(0);
   const [visible, setVisible] = useState(false);
 
-  const showDialog = () => setVisible(true);
-  const hideDialog = () => setVisible(false);
 
   useEffect(() => {
     dispatch(postsActions.readNewPosts(0)).then(() => {
@@ -49,7 +47,7 @@ const NewRecordsPage = ({
   };
 
   const readAllNewPosts = () => {
-    console.log(randomposts_loading +" "+morerandomposts_loading)
+    console.log(randomposts_loading + " " + morerandomposts_loading)
     if (!randomposts_loading && !morerandomposts_loading) {
       console.log(1)
       dispatch(postsActions.readMoreNewPosts(offset)).then(() => {

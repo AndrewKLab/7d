@@ -9,6 +9,7 @@ const Posts = ({
   navigation,
   randomposts_error,
   posts,
+  posts_name,
   orintation,
   readAllNewPosts,
   onRefresh,
@@ -46,6 +47,7 @@ const Posts = ({
           item={item}
           navigation={navigation}
           dispatch={dispatch}
+          posts={posts_name}
         />
       )}
       //Setting the number of column

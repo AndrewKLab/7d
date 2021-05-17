@@ -8,11 +8,12 @@ import { connect } from 'react-redux';
 import RenderHtml from 'react-native-render-html';
 import moment from 'moment';
 import localization from 'moment/locale/ru';
+import { postsActions } from '../_actions';
 
 const Reccord = ({ route, dispatch, fontsize, theme }) => {
   const rec = route.params.reccord;
   const posts = route.params.posts;
-
+  const [favorite, setFavorite] = useState(rec.favorite);
   return (
     <ScrollView style={styles.container}>
       <Container>
@@ -54,6 +55,11 @@ const Reccord = ({ route, dispatch, fontsize, theme }) => {
               <IconButton icon="eye" size={24} />
               <Text>{rec.views}</Text>
             </View>
+            <IconButton
+              icon={favorite === true ? 'heart' : 'heart-outline'}
+              size={24}
+              onPress={() => { dispatch(postsActions.toggleFavorites(rec, posts)), setFavorite(!favorite) }}
+            />
             <IconButton
               icon="share"
               size={24}
