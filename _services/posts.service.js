@@ -10,7 +10,7 @@ export const postsService = {
 };
 
 function readRandomPosts(offset) {
-  return axios.get(`https://proekt7d.ru/api/v1/post/read_random_posts.php?o=${offset}`);
+  return axios.get(`https://proekt7d.ru/api/v1/post/read_random_posts.php?o=${offset}&l=15`);
 }
 
 function readPostsByCategory(url, category, offset) {
