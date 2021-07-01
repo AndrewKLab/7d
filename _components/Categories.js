@@ -92,6 +92,7 @@ const Categories = ({
                 {item.subcategories.map((subcategory, index) => (
                   <List.Item
                     title={subcategory.name}
+                    key={index}
                     onPress={() => {
                       navigation.navigate('Записи', {
                         title: item.name,
